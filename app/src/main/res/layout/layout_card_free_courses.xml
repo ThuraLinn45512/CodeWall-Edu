@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginEnd="16dp"
+    android:layout_marginStart="16dp"
+    >
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="16dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="0dp"
+        app:strokeColor="@color/card_background"
+        app:strokeWidth="1dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        >
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="16dp"
+    android:background="@color/white"
+    >
+
+    <ImageView
+        android:id="@+id/iv_Course"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/courses_figma" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        style="@style/title_medium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:maxWidth="320dp"
+        android:text="UI and Figma Master Basic to Advanced Course"
+        android:textColor="@color/text_primary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_Course" />
+
+
+    <ImageView
+        android:id="@+id/ivDuration"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/baseline_clock_loader_90_24px"
+        app:layout_constraintStart_toStartOf="@+id/tv_title"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title" />
+
+    <TextView
+        android:id="@+id/tvDuration"
+        style="@style/body_small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:text="20 Mins"
+        android:textColor="@color/text_label"
+        app:layout_constraintBottom_toBottomOf="@+id/ivDuration"
+        app:layout_constraintStart_toEndOf="@+id/ivDuration"
+        app:layout_constraintTop_toTopOf="@+id/ivDuration" />
+
+
+    <ImageView
+
+        android:id="@+id/plan"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:layout_marginStart="16dp"
+        android:src="@drawable/baseline_menu_book_24px"
+        app:layout_constraintBottom_toBottomOf="@+id/tvDuration"
+        app:layout_constraintStart_toEndOf="@+id/tvDuration"
+        app:layout_constraintTop_toTopOf="@+id/tvDuration" />
+
+    <TextView
+        android:id="@+id/tv_chapter_count"
+        style="@style/body_small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:text="Chapters 14"
+        android:textColor="@color/text_label"
+        app:layout_constraintBottom_toBottomOf="@+id/plan"
+        app:layout_constraintStart_toEndOf="@+id/plan"
+        app:layout_constraintTop_toTopOf="@+id/plan" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </com.google.android.material.card.MaterialCardView>
+</LinearLayout>

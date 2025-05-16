@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/homeFragment"
+        android:icon="@drawable/bottom_nav_switch_icon_home"
+        android:title="@string/home"
+
+        />
+
+    <item
+        android:id="@+id/learnFragment"
+        android:icon="@drawable/bottom_nav_switch_icon_learn"
+        android:title="@string/learn"
+
+        />
+
+    <item
+        android:id="@+id/blogsFragment"
+        android:icon="@drawable/bottom_nav_switch_icon_explore"
+        android:title="@string/explore"
+
+        />
+
+    <item
+        android:id="@+id/profileFragment"
+        android:icon="@drawable/bottom_nav_icon_tools_24px"
+        android:title="@string/tools"
+        />
+
+</menu>

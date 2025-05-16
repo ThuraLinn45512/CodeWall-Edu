@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="preloaded_fonts" translatable="false">
+        <item>@font/audiowide</item>
+        <item>@font/inter</item>
+        <item>@font/inter_bold</item>
+        <item>@font/noto_sans_myanmar</item>
+        <item>@font/poppins_bold</item>
+        <item>@font/urbanist</item>
+    </array>
+</resources>

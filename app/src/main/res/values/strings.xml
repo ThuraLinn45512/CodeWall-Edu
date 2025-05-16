@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">CodeWall Edu</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+    <!--    global_text-->
+    <string name="email_address">Email</string>
+    <string name="password">Password</string>
+    <string name="enter_your_password">Enter your password</string>
+    <string name="remember_password">Remember me</string>
+    <string name="sign_in">Sign In</string>
+    <string name="forget_password">Forget password</string>
+    <string name="continue_with">or continue with</string>
+    <string name="continue_with_google">Continue with Google</string>
+    <string name="do_not_have_an_account">Don\'t have an account?</string>
+    <string name="sign_up_here">Sign up here</string>
+    <string name="username">Username</string>
+    <string name="enter_your_name">Enter your name</string>
+    <string name="create_a_password">Create a password</string>
+    <string name="create_an_account">Create an account</string>
+    <string name="already_have_an_account">Already have an account?</string>">
+    <string name="sign_in_here">Sign in here</string>">
+    <string name="enter_your_email_address">Enter your email address</string>">
+    <string name="send_code">Send Code</string>">
+    <string name="verify">Verify</string>">
+    <string name="did_not_receive_the_email">Didn\'t receive the email?</string>
+    <string name="click_here_to_resend">Click here to resend</string>
+    <string name="new_password">New Password</string>
+    <string name="enter_your_new_password">Enter your New Password</string>
+    <string name="example_password">examplepassword@1234</string>
+    <string name="retype_new_password">Re-type new password</string>
+    <string name="confirm_your_new_password">Confirm your new password</string>
+    <string name="reset_password">Reset Password</string>
+
+    <!--    splash_screen_text-->
+    <string name="app_name_splash_screen">CodeWall Edu</string>
+
+    <!--    onboarding_text-->
+    <string name="next">Next</string>
+    <string name="skip">Skip</string>
+    <string name="get_started">Get Started</string>
+    <string name="vertical_bar">|</string>
+    <string name="english_language_sign">Eng</string>
+    <string name="myanmar_language_sign">မြန်</string>
+
+    <!--    onboarding_titles-->
+    <string name="title_first_onboarding_screen">Start Your Journey with Us</string>
+    <string name="title_second_onboarding_screen">Explore Courses</string>
+    <string name="title_third_onboarding_screen">Improve Your Knowledge</string>
+
+    <!--    onboarding_subtitles-->
+    <string name="subtitle_first_onboarding_screen">Welcome to CodeWall App!\nExplore diverse courses and\nunlock your potential. Your journey\nto success starts now!</string>
+    <string name="subtitle_second_onboarding_screen">Discover a wide range of courses\ncurated just for you. From beginner to\nadvanced levels, there\'s something for\neveryone.</string>
+    <string name="subtitle_third_onboarding_screen">Ready to dive in? Begin your learning\njourney now and unlock your full\npotential with CodeWall.</string>
+
+
+    <!--    login_screen_text-->
+    <string name="title_login_screen">Good to see you again !</string>
+    <string name="subtitle_login_screen">Sign in to continue your learning journey.</string>
+
+    <!--    sign_up_screen_text-->
+    <string name="title_signup_screen">Start Learning with Us</string>
+    <string name="subtitle_signup_screen">Sign up to access a world of knowledge</string>
+
+    <!--    forget_password_text-->
+    <string name="title_forget_password_screen">Forget Password ?</string>
+    <string name="subtitle_forget_password_screen">Enter your email to reset your password and\n get back to learning.</string>
+
+
+    <!--    verification_code_screen_text-->
+    <string name="title_verification_code_screen">OTP Verification</string>
+    <string name="subtitle_verification_code_screen">Please enter the OTP(One-Time Password) sent\n to your registered email to complete\n your registration.</string>
+    <string name="resend_code_timer">Remaining time: </string>
+
+
+    <!--    reset_password_screen_text-->
+    <!--    had reset password-->
+    <!--    <string name="title_reset_password_screen">Reset Password</string>-->
+    <string name="subtitle_reset_password_screen">Create a new password to complete your reset.</string>
+    <string name="explore">Explore</string>
+    <string name="learn">Learn</string>
+    <string name="content">Content</string>
+    <string name="tools">Tools</string>
+    <string name="home">Home</string>
+    <string name="refer_a_friend">Refer a friend to app and receive a discount coupon on your next purchase.</string>
+    <string name="invite_friends">Invite Friends</string>
+    <string name="read_more">Read more</string>
+
+
+</resources>
