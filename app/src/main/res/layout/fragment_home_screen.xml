@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".src.ui.views.core.home.HomeFragment"
+    tools:context=".src.ui.views.core.home.HomeScreenFragment"
     android:background="@color/white"
     android:orientation="vertical">
 
@@ -24,7 +24,7 @@
             tools:visibility="visible"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            tools:context=".src.ui.views.core.home.HomeFragment"
+            tools:context=".src.ui.views.core.home.HomeScreenFragment"
             android:background="@color/white"
             android:orientation="vertical">
 
@@ -34,7 +34,7 @@
                 android:layout_height="wrap_content"
                 android:background="@color/white"
                 android:orientation="vertical"
-                tools:context=".src.ui.views.core.home.HomeFragment">
+                tools:context=".src.ui.views.core.home.HomeScreenFragment">
 
 
 
@@ -271,7 +271,7 @@
                     android:layout_marginTop="8dp"
                     tools:itemCount="3"
                     android:orientation="horizontal"
-                    tools:listitem="@layout/layout_card_blogs_card"
+                    tools:listitem="@layout/layout_card_blogs"
                     />
 
 

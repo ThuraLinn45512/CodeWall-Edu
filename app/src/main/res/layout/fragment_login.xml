@@ -224,7 +224,7 @@
         app:layout_constraintStart_toStartOf="parent">
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/tv_reading_time"
+            android:id="@+id/tv_tag_line"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
