@@ -5,6 +5,7 @@ import com.lesson.codewalledu.src.data.remote.ApiService
 import com.lesson.codewalledu.src.data.remote.AuthInterceptor
 import com.lesson.codewalledu.src.data.repositories.AuthRepository
 import com.lesson.codewalledu.src.utils.Constants.Companion.BASE_URL
+import com.lesson.codewalledu.src.utils.Constants.Companion.MAIN_BASE_URL
 import com.lesson.codewalledu.src.utils.TokenManager
 import dagger.Module
 import dagger.Provides
@@ -41,7 +42,7 @@ object AppModule {
     @Singleton
     fun provideRetrofit(okHttpClient: OkHttpClient): Retrofit {
         return Retrofit.Builder()
-            .baseUrl(BASE_URL) // Replace with your actual base URL
+            .baseUrl(MAIN_BASE_URL) // Replace with your actual base URL
             .client(okHttpClient)
             .addConverterFactory(GsonConverterFactory.create())
             .build()

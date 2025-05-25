@@ -30,12 +30,17 @@ class MainFragment : Fragment(R.layout.fragment_main) {
 
 
         navController.addOnDestinationChangedListener { _, destination, _ ->
-            if (destination.id == R.id.homeFragment || destination.id == R.id.learnFragment || destination.id == R.id.blogsFragment || destination.id ==R.id.profileFragment) { // Replace with your details_fragment ID
-                binding.bottomNavView.visibility = View.VISIBLE} else {
+            if (destination.id == R.id.mainFragment
+                || destination.id == R.id.learnScreenFragment
+                || destination.id == R.id.exploreScreenFragment
+                || destination.id ==R.id.profileScreenFragment
+                ) { // Replace with your details_fragment ID
+                binding.bottomNavView.visibility = View.VISIBLE
+            } else {
                 binding.bottomNavView.visibility = View.GONE
             }
 
-            if (destination.id == R.id.homeFragment) {
+            if (destination.id == R.id.mainFragment) {
                 binding.fabLiveChat.visibility = View.VISIBLE
             } else {
                 binding.fabLiveChat.visibility = View.GONE

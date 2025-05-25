@@ -40,5 +40,9 @@
     <color name="icon_primary">@color/grey2</color>
 
 
+    <color name="tab_inactive_color">@color/color_neutral_700</color>
+    <color name="tab_active_color">@color/brand</color>
+
+
 
 </resources>

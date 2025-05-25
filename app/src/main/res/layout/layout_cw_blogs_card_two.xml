@@ -41,7 +41,7 @@
         app:srcCompat="@drawable/blogs_figma" />
 
     <TextView
-        android:id="@+id/tv_title_blogs"
+        android:id="@+id/tv_title_news"
         style="@style/title_medium"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -66,8 +66,8 @@
         android:layout_marginTop="8dp"
         android:importantForAccessibility="no"
         android:src="@drawable/baseline_notifications_none_white_24"
-        app:layout_constraintStart_toStartOf="@+id/tv_title_blogs"
-        app:layout_constraintTop_toBottomOf="@+id/tv_title_blogs" />
+        app:layout_constraintStart_toStartOf="@+id/tv_title_news"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title_news" />
 
 
     <TextView
@@ -91,12 +91,12 @@
         android:layout_marginTop="8dp"
         android:src="@drawable/baseline_notifications_none_white_24"
         app:layout_constraintStart_toEndOf="@id/tv_created_date"
-        app:layout_constraintTop_toBottomOf="@+id/tv_title_blogs" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_title_news" />
 
 
     <TextView
         android:layout_marginStart="8dp"
-        android:id="@+id/tv_reading_time"
+        android:id="@+id/tv_tag_line"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Reading"

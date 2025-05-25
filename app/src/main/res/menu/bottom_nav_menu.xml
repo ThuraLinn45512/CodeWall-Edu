@@ -3,30 +3,30 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
-        android:id="@+id/homeFragment"
+        android:id="@+id/mainFragment"
         android:icon="@drawable/bottom_nav_switch_icon_home"
         android:title="@string/home"
 
         />
 
     <item
-        android:id="@+id/learnFragment"
+        android:id="@+id/learnScreenFragment"
         android:icon="@drawable/bottom_nav_switch_icon_learn"
         android:title="@string/learn"
 
         />
 
     <item
-        android:id="@+id/blogsFragment"
+        android:id="@+id/exploreScreenFragment"
         android:icon="@drawable/bottom_nav_switch_icon_explore"
         android:title="@string/explore"
 
         />
 
     <item
-        android:id="@+id/profileFragment"
+        android:id="@+id/profileScreenFragment"
         android:icon="@drawable/bottom_nav_icon_tools_24px"
-        android:title="@string/tools"
+        android:title="@string/profile"
         />
 
 </menu>

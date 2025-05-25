@@ -2,6 +2,7 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginEnd="16dp"
@@ -29,16 +30,6 @@
     android:background="@color/white"
     >
 
-    <ImageView
-        android:id="@+id/iv_Course"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:scaleType="centerCrop"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/courses_flutter" />
-
     <TextView
         android:id="@+id/tv_date_upcoming_courses"
         style="@style/body_medium"
@@ -62,17 +53,15 @@
         app:layout_constraintTop_toTopOf="parent" />
 
 
-
     <TextView
         android:id="@+id/tv_title_upcoming_course"
         style="@style/title_medium"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
         android:text="Drat Programming And Flutter Framework Course"
         android:textColor="@color/text_primary"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/iv_Course" />
+        tools:layout_editor_absoluteY="76dp" />
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/cv_tab"

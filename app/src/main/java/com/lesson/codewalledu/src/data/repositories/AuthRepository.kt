@@ -1,7 +1,10 @@
 package com.lesson.codewalledu.src.data.repositories
 
 import com.lesson.codewalledu.src.data.models.auth.AuthResponse
-import com.lesson.codewalledu.src.data.models.core.home.DataResponse
+import com.lesson.codewalledu.src.data.models.core.explore.BlogsDataResponse
+import com.lesson.codewalledu.src.data.models.core.explore.BooksDataResponse
+import com.lesson.codewalledu.src.data.models.core.explore.CheatSheetsDataResponse
+import com.lesson.codewalledu.src.data.models.core.explore.NewsDataResponse
 import com.lesson.codewalledu.src.data.models.core.home.CoursesDataResponse
 import com.lesson.codewalledu.src.data.models.core.home.TopicDataResponse
 import com.lesson.codewalledu.src.data.remote.ApiService
@@ -73,14 +76,36 @@ class AuthRepository(private val apiService: ApiService,private val tokenManager
      */
 
 
-    suspend fun getTopics(): Resource<TopicDataResponse> = responseResource(api.getTopic())
-    suspend fun getPopularCourses(): Resource<CoursesDataResponse> = responseResource(api.getPopularCourses())
-    suspend fun getFreeCourses(): Resource<CoursesDataResponse> = responseResource(api.getFreeCourses())
-    suspend fun getUpcomingCourses(): Resource<CoursesDataResponse> = responseResource(api.getUpcomingCourses())
+//    suspend fun getTopics(): Resource<TopicDataResponse> = responseResource(api.getTopic())
+//    suspend fun getPopularCourses(): Resource<CoursesDataResponse> = responseResource(api.getPopularCourses())
+//    suspend fun getFreeCourses(): Resource<CoursesDataResponse> = responseResource(api.getFreeCourses())
+//    suspend fun getUpcomingCourses(): Resource<CoursesDataResponse> = responseResource(api.getUpcomingCourses())
 
 
-    suspend fun getBlogs():Resource<DataResponse> {
-        return responseResource(apiService.getBlogs())
+
+
+    /**
+     * Group Five
+     */
+    suspend fun getBlogs():Resource<BlogsDataResponse> {
+        val token = tokenManager.getToken()
+        return responseResource(apiService.getBlogs("Bearer $token"))
+    }
+
+
+    suspend fun getNews():Resource<NewsDataResponse> {
+        val token = tokenManager.getToken()
+        return responseResource(apiService.getNews("Bearer $token"))
+    }
+
+    suspend fun getBooks():Resource<BooksDataResponse> {
+        val token = tokenManager.getToken()
+        return responseResource(apiService.getBooks("Bearer $token"))
+    }
+
+    suspend fun getCheatSheets():Resource<CheatSheetsDataResponse> {
+        val token = tokenManager.getToken()
+        return responseResource(apiService.getCheatSheets("Bearer $token"))
     }
 
 

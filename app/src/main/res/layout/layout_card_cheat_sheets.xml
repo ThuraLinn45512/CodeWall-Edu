@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/discovers_root"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="16dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="0dp"
+        app:strokeColor="@color/card_background"
+        app:strokeWidth="0dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:paddingBottom="16dp">
+
+            <ImageView
+                android:id="@+id/iv_logo"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="20dp"
+                android:importantForAccessibility="no"
+                android:scaleType="fitCenter"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:srcCompat="@tools:sample/avatars" />
+
+            <TextView
+                android:id="@+id/tv_tech_category"
+                style="@style/title_medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:ellipsize="end"
+                android:maxWidth="250dp"
+                android:maxLines="2"
+                android:text="UX"
+                android:textColor="@color/text_primary"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/iv_logo"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <TextView
+                android:id="@+id/tv_created_date"
+                style="@style/body_small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:text="Jan 1, 2025"
+                android:textColor="@color/text_label"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_tech_category"
+                app:layout_constraintStart_toEndOf="@+id/dash"
+                app:layout_constraintTop_toTopOf="@+id/tv_tech_category" />
+
+            <TextView
+                android:id="@+id/dash"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginBottom="-8dp"
+                android:text="-"
+                android:textColor="@color/text_primary"
+                android:textSize="32sp"
+                app:flow_verticalAlign="center"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_tech_category"
+                app:layout_constraintStart_toEndOf="@+id/tv_tech_category" />
+
+            <TextView
+                android:id="@+id/tv_short_description"
+                style="@style/label_small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="UX Terms to Understand the design process"
+                android:textColor="@color/text_label"
+                app:layout_constraintStart_toStartOf="@+id/tv_tech_category"
+                app:layout_constraintTop_toBottomOf="@+id/tv_tech_category" />
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_horizontal_images"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:minHeight="200dp"
+                android:layout_marginStart="56dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginTop="16dp"
+                android:orientation="horizontal"
+                android:clipToPadding="false"
+                android:paddingStart="0dp"
+                android:paddingEnd="16dp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_short_description"
+                tools:itemCount="3"
+                tools:listitem="@layout/item_cheat_sheet_image" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </com.google.android.material.card.MaterialCardView>
+</LinearLayout>

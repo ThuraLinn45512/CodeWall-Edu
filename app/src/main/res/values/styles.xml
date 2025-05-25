@@ -47,6 +47,16 @@
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
     </style>
+    <style name="label_small">
+        <item name="android:text">Label Medium</item>
+        <item name="android:fontFamily">@font/urbanist</item>
+        <item name="android:fontWeight">400</item>
+        <item name="android:textSize">11sp</item>
+        <item name="android:lineHeight">16dp</item>
+        <item name="android:textColor">@color/text_unconfrimed</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
 
     <style name="body_large">
         <item name="android:text">Body Large</item>
@@ -78,6 +88,14 @@
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
     </style>
+    <style name="body_myanmar_text">
+        <item name="android:fontFamily">@font/noto_sans_myanmar</item>
+        <item name="android:fontWeight">400</item>
+        <item name="android:textSize">10sp</item>
+        <item name="android:lineHeight">12dp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
 
 <!--    project styles-->
     <style name="onboarding_screen_background_image_style">
@@ -91,6 +109,16 @@
 
         <item name="android:background">@drawable/gradient_bg_95</item>
 
+    </style>
+
+    <style name="MyCustomTabStyle" parent="Widget.Design.TabLayout">
+        <item name="tabTextAppearance">@style/MyTabTextAppearance</item>
+        <item name="tabSelectedTextColor">@color/tab_active_color</item>   <item name="tabTextColor">@color/tab_inactive_color</item>     </style>
+
+    <style name="MyTabTextAppearance" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textAllCaps">true</item>
     </style>
 
 

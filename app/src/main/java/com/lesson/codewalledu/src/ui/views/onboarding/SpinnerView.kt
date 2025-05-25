@@ -3,7 +3,7 @@ package com.lesson.codewalledu.src.ui.views.onboarding
 import android.content.Context
 import android.widget.Spinner
 import com.lesson.codewalledu.R
-import com.lesson.codewalledu.src.ui.adapters.onboarding.SpinnerAdapter
+import com.lesson.codewalledu.src.utils.adapters.SpinnerAdapter
 
 
 fun createSpinner(context: Context, spinner: Spinner ) {

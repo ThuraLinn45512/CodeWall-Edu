@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/explore_nav"
+    app:startDestination="@id/exploreScreenFragment2">
+
+    <fragment
+        android:id="@+id/exploreScreenFragment2"
+        android:name="com.lesson.codewalledu.src.ui.views.core.explore.ExploreScreenFragment"
+        android:label="fragment_explore_screen"
+        tools:layout="@layout/fragment_explore_screen" />
+    <fragment
+        android:id="@+id/fragmentErrorTestFragment2"
+        android:name="com.lesson.codewalledu.src.ui.views.core.explore.blogs.FragmentErrorTestFragment"
+        android:label="fragment_error_test"
+        tools:layout="@layout/fragment_error_test" />
+    <fragment
+        android:id="@+id/blogsFragment"
+        android:name="com.lesson.codewalledu.src.ui.views.core.explore.blogs.BlogsFragment"
+        android:label="fragment_blogs"
+        tools:layout="@layout/fragment_blogs" >
+        <action
+            android:id="@+id/action_blogsFragment_to_fragmentErrorTestFragment2"
+            app:destination="@id/fragmentErrorTestFragment2" />
+    </fragment>
+</navigation>

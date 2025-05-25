@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+    android:id="@+id/swipeRefreshLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".src.ui.views.core.explore.cheat_sheets.CheatSheetsFragment">
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <com.facebook.shimmer.ShimmerFrameLayout
+                    android:id="@+id/shimmerLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="20dp"
+                            android:background="@color/grey" />
+
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="16dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="32dp"
+                            android:background="@color/color_neutral_700" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="16dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="32dp"
+                            android:background="@color/grey" />
+                    </LinearLayout>
+                </com.facebook.shimmer.ShimmerFrameLayout>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_news"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:scrollbars="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="8dp"
+                    tools:itemCount="3"
+                    android:scrollbarSize="@dimen/spacing_3xl"
+                    android:scrollbarStyle="insideInset"
+                    tools:listitem="@layout/layout_card_cheat_sheets"
+                    android:paddingBottom="4dp"
+                    />
+            </FrameLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
