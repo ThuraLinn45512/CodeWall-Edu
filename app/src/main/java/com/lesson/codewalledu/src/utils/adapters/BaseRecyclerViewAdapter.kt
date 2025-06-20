@@ -1,5 +1,6 @@
 package com.lesson.codewalledu.src.utils.adapters
 
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -11,6 +12,15 @@ class BaseRecyclerViewAdapter<T>(
     private var stuffList: List<T>,
     private val bindView: ((position: Int, data: T, View) -> Unit),
 ):RecyclerView.Adapter<BaseRecyclerViewAdapter<T>.BaseViewHolder>(){
+
+
+    // Public method to update the data
+    @SuppressLint("NotifyDataSetChanged")
+    fun setItems(newItems: List<T>) {
+        this.stuffList = newItems
+        notifyDataSetChanged() // Notifies RecyclerView that data has changed
+        // For better performance with large lists, consider using DiffUtil
+    }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BaseViewHolder =
        BaseViewHolder(LayoutInflater.from(parent.context).inflate(layoutId,parent,false))

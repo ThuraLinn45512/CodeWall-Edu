@@ -2,8 +2,8 @@
     <!-- Base application theme. -->
     <style name="Base.Theme.CodeWallEdu2024" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
-         <item name="colorPrimary">@color/white</item>
-         <item name="android:statusBarColor">@color/blue</item>
+        <item name="colorPrimary">@color/white</item>
+        <item name="android:statusBarColor">@color/brand</item>
     </style>
 
     <style name="Theme.CodeWallEdu2024" parent="Base.Theme.CodeWallEdu2024" />
@@ -13,6 +13,6 @@
     </style>
 
 
-
-
 </resources>
+
+

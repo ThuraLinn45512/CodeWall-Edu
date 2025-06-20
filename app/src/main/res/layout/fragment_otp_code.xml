@@ -135,7 +135,7 @@
         >
         <androidx.appcompat.widget.AppCompatTextView
             android:text="@string/resend_code_timer"
-            android:textColor="@color/text_unconfrimed"
+            android:textColor="@color/text_color_2"
             android:layout_marginEnd="2dp"
             style="@style/body_small" />
         <androidx.appcompat.widget.AppCompatTextView

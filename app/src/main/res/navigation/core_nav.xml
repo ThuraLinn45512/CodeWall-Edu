@@ -3,110 +3,258 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/core_nav"
-    app:startDestination="@id/mainFragment">
+    app:startDestination="@id/homeScreenFragment">
 
 
-
+    <!--    home screen-->
     <fragment
-        android:id="@+id/mainFragment"
+        android:id="@+id/homeScreenFragment"
         android:name="com.lesson.codewalledu.src.ui.views.core.home.HomeScreenFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home_screen">
         <action
-            android:id="@+id/action_homeFragment_to_topicFragment"
-            app:destination="@id/topicFragment" />
-        <action
-            android:id="@+id/action_homeFragment_to_currentCoursesFragment"
-            app:destination="@id/currentCoursesFragment" />
+            android:id="@+id/action_homeFragment_to_searchResultsFragment"
+            app:destination="@id/searchResultsFragment"
+            />
         <action
             android:id="@+id/action_homeFragment_to_showAllBlogsFragment"
             app:destination="@id/showAllBlogsFragment" />
         <action
             android:id="@+id/action_homeFragment_to_readingBlogFragment"
             app:destination="@id/readingBlogFragment" />
-
-    </fragment>
-
-
-    <fragment
-        android:id="@+id/learnScreenFragment"
-        android:name="com.lesson.codewalledu.src.ui.views.core.learn.LearnScreenFragment"
-        android:label="fragment_learn"
-        tools:layout="@layout/fragment_learn_screen" />
-
-
-    <fragment
-        android:id="@+id/exploreScreenFragment"
-        android:name="com.lesson.codewalledu.src.ui.views.core.explore.ExploreScreenFragment"
-        android:label="fragment_explore_screen"
-        tools:layout="@layout/fragment_explore_screen" >
-    </fragment>
-
-    <fragment
-        android:id="@+id/profileScreenFragment"
-        android:name="com.lesson.codewalledu.src.ui.views.core.profile.ProfileScreenFragment"
-        android:label="fragment_profile"
-        tools:layout="@layout/fragment_profile_screen" />
-
-
-
-
-
-    <fragment
-        android:id="@+id/topicFragment"
-        android:name="com.lesson.codewalledu.src.ui.views.core.home.topics.TopicSubScreenFragment"
-        android:label="fragment_topic"
-        tools:layout="@layout/fragment_topic_sub_screen" >
         <action
-            android:id="@+id/action_topicFragment_to_exploreFragment"
-            app:destination="@id/mainFragment" />
+            android:id="@+id/action_homeScreenFragment_to_showAllCoursesFragment"
+            app:destination="@id/showAllCoursesFragment" />
+        <action
+            android:id="@+id/action_homeScreenFragment_to_showCourseDetailsFragment"
+            app:destination="@id/showCourseDetailsFragment" />
+        <action
+            android:id="@+id/action_homeScreenFragment_to_showTopicCoursesFragment"
+            app:destination="@id/showTopicCoursesFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/searchResultsFragment"
+        android:name="com.lesson.codewalledu.src.ui.views.core.home.SearchResultsFragment"
+        android:label="Search Results" >
         <argument
-            android:name="category"
+            android:name="searchQuery"
             app:argType="string" />
-    </fragment>
-    <fragment
-        android:id="@+id/currentCoursesFragment"
-        android:name="com.lesson.codewalledu.src.ui.views.core.home.courses.CurrentCoursesFragment"
-        android:label="CurrentCoursesFragment" >
         <action
-            android:id="@+id/action_currentCoursesFragment_to_exploreFragment"
-            app:destination="@id/mainFragment" />
+            android:id="@+id/action_searchResultsFragment_pop"
+            app:popUpTo="@id/searchResultsFragment"
+            app:popUpToInclusive="true" />
     </fragment>
-    <fragment
-        android:id="@+id/upComingFragment"
-        android:name="com.lesson.codewalledu.src.ui.views.core.home.upcoming_courses.UpComingCoursesFragment"
-        android:label="UpComingFragment">
-        <action
-            android:id="@+id/action_upComingFragment_to_exploreFragment"
-            app:destination="@id/mainFragment" />
-    </fragment>
-
-
-
     <fragment
         android:id="@+id/showAllBlogsFragment"
         android:name="com.lesson.codewalledu.src.ui.views.core.home.daily_dev.ShowAllBlogsFragment"
         android:label="fragment_show_all_blogs"
-        tools:layout="@layout/fragment_show_all_blogs" >
+        tools:layout="@layout/fragment_show_all_blogs">
         <action
             android:id="@+id/action_showAllBlogsFragment_to_readingBlogFragment"
             app:destination="@id/readingBlogFragment" />
         <action
-            android:id="@+id/action_showAllBlogsFragment_to_homeScreenFragment"
-            app:destination="@id/mainFragment" />
+            android:id="@+id/action_showAllBlogsFragment_pop"
+            app:popUpTo="@id/showAllBlogsFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/showTopicCoursesFragment"
+        android:name="com.lesson.codewalledu.src.ui.views.core.home.courses.ShowTopicCoursesFragment"
+        android:label="ShowTopicCoursesFragment" >
+        <action
+            android:id="@+id/action_showTopicCoursesFragment_pop"
+            app:popUpTo="@id/showTopicCoursesFragment"
+            app:popUpToInclusive="true" />
+        <argument
+            android:name="name"
+            app:argType="string" />
+        <argument
+            android:name="slug"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_showTopicCoursesFragment_to_showCourseDetailsFragment"
+            app:destination="@id/showCourseDetailsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/showAllCoursesFragment"
+        android:name="com.lesson.codewalledu.src.ui.views.core.home.courses.ShowAllCoursesFragment"
+        android:label="ShowAllCoursesFragment" >
+        <argument
+            android:name="courses"
+            app:argType="com.lesson.codewalledu.src.data.models.core.home.CoursesData[]" />
+        <argument
+            android:name="title_from"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_showAllCoursesFragment_pop"
+            app:popUpTo="@id/showAllCoursesFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_showAllCoursesFragment_to_showCourseDetailsFragment"
+            app:destination="@id/showCourseDetailsFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/showCourseDetailsFragment"
+        android:name="com.lesson.codewalledu.src.ui.views.core.home.courses.ShowCourseDetailsFragment"
+        android:label="fragment_show_course_details"
+        tools:layout="@layout/fragment_show_course_details" >
+        <action
+            android:id="@+id/action_showCourseDetailsFragment_pop"
+            app:popUpTo="@id/showCourseDetailsFragment"
+            app:popUpToInclusive="true" />
+        <argument
+            android:name="index"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_showCourseDetailsFragment_to_enrollInCourseFragment"
+            app:destination="@id/enrollInCourseFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/enrollInCourseFragment"
+        android:name="com.lesson.codewalledu.src.ui.views.core.home.courses.EnrollInCourseFragment"
+        android:label="fragment_enroll_in_course"
+        tools:layout="@layout/fragment_enroll_in_course" >
+        <action
+            android:id="@+id/action_enrollInCourseFragment_pop"
+            app:popUpTo="@id/enrollInCourseFragment"
+            app:popUpToInclusive="true" />
+        <argument
+            android:name="courseId"
+            app:argType="integer" />
+    </fragment>
+
+
+    <!-- learn screen -->
+    <fragment
+        android:id="@+id/learnScreenFragment"
+        android:name="com.lesson.codewalledu.src.ui.views.core.learn.LearnScreenFragment"
+        android:label="fragment_learn"
+        tools:layout="@layout/fragment_learn_screen" >
+        <action
+            android:id="@+id/action_learnScreenFragment_to_homeScreenFragment"
+            app:destination="@id/homeScreenFragment" />
+    </fragment>
+
+
+    <!--    profile screen-->
+    <fragment
+        android:id="@+id/profileScreenFragment"
+        android:name="com.lesson.codewalledu.src.ui.views.core.profile.ProfileScreenFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile_screen" >
+        <action
+            android:id="@+id/action_profileScreenFragment_to_homeScreenFragment"
+            app:destination="@id/homeScreenFragment" />
+    </fragment>
+
+
+
+
+<!--    explore screen-->
+    <fragment
+        android:id="@+id/exploreScreenFragment"
+        android:name="com.lesson.codewalledu.src.ui.views.core.explore.ExploreScreenFragment"
+        android:label="fragment_explore_screen"
+        tools:layout="@layout/fragment_explore_screen">
+        <action
+            android:id="@+id/action_exploreScreenFragment_to_homeScreenFragment"
+            app:destination="@id/homeScreenFragment" />
     </fragment>
     <fragment
+        android:id="@+id/blogsFragment"
+        android:name="com.lesson.codewalledu.src.ui.views.core.explore.blogs.BlogsFragment"
+        android:label="fragment_blogs"
+        tools:layout="@layout/fragment_blogs">
+    </fragment>
+
+
+
+<!--    global -->
+    <fragment
         android:id="@+id/readingBlogFragment"
-        android:name="com.lesson.codewalledu.src.ui.views.core.home.daily_dev.ReadingBlogFragment"
+        android:name="com.lesson.codewalledu.src.ui.views.core.explore.blogs.ReadingBlogFragment"
         android:label="fragment_reading_blog"
-        tools:layout="@layout/fragment_reading_blog" >
+        tools:layout="@layout/fragment_reading_blog">
         <argument
             android:name="blog_url"
             app:argType="string" />
         <action
-            android:id="@+id/action_readingBlogFragment_to_homeFragment"
-            app:destination="@id/mainFragment" />
+            android:id="@+id/action_readingBlogFragment_pop"
+            app:popUpTo="@id/readingBlogFragment"
+            app:popUpToInclusive="true" />
     </fragment>
+    <action android:id="@+id/action_global_readingBlogFragment"
+        app:destination="@id/readingBlogFragment"/>
+
+    <fragment
+        android:id="@+id/readingNewsFragment"
+        android:name="com.lesson.codewalledu.src.ui.views.core.explore.news.ReadingNewsFragment"
+        android:label="fragment_reading_news"
+        tools:layout="@layout/fragment_reading_news" >
+        <argument
+            android:name="news"
+            app:argType="com.lesson.codewalledu.src.data.models.core.explore.NewsData" />
+        <action
+            android:id="@+id/action_readingNewsFragment_pop"
+            app:popUpTo="@id/readingNewsFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <action android:id="@+id/action_global_readingNewsFragment"
+            app:destination="@id/readingNewsFragment" />
+
+    <fragment
+        android:id="@+id/viewBookFragment"
+        android:name="com.lesson.codewalledu.src.ui.views.core.explore.books.ViewBookFragment"
+        android:label="fragment_view_book"
+        tools:layout="@layout/fragment_view_book" >
+        <argument
+            android:name="book"
+            app:argType="com.lesson.codewalledu.src.data.models.core.explore.BookData" />
+        <action
+            android:id="@+id/action_viewBookFragment_pop"
+            app:popUpTo="@id/viewBookFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_viewBookFragment_to_booksFragment"
+            app:destination="@id/booksFragment" />
+        <argument
+            android:name="book_list"
+            app:argType="com.lesson.codewalledu.src.data.models.core.explore.BookData[]" />
+    </fragment>
+    <action android:id="@+id/action_global_viewBookFragment"
+        app:destination="@id/viewBookFragment"/>
+
+    <fragment
+        android:id="@+id/booksFragment"
+        android:name="com.lesson.codewalledu.src.ui.views.core.explore.books.BooksFragment"
+        android:label="fragment_books"
+        tools:layout="@layout/fragment_books" />
+    <fragment
+        android:id="@+id/viewCheatSheetFragment"
+        android:name="com.lesson.codewalledu.src.ui.views.core.explore.cheat_sheets.ViewCheatSheetFragment"
+        android:label="fragment_view_cheat_sheet"
+        tools:layout="@layout/fragment_view_cheat_sheet" >
+        <action
+            android:id="@+id/action_viewCheatSheetFragment_pop"
+            app:popUpTo="@id/viewCheatSheetFragment"
+            app:popUpToInclusive="true" />
+        <argument
+            android:name="cheat_sheet"
+            app:argType="com.lesson.codewalledu.src.data.models.core.explore.DiscoveryContent[]" />
+
+        <argument
+            android:name="position"
+            app:argType="integer" />
+    </fragment>
+    <action android:id="@+id/action_global_viewCheatSheetFragment" app:destination="@id/viewCheatSheetFragment" />
+
+
 
 
 

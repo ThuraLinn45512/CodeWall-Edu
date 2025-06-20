@@ -4,12 +4,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".src.ui.views.core.profile.ProfileScreenFragment"
-    android:background="#009688"
     >
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Hello" />
+    <include
+        android:id="@+id/my_learning_course_toolbar"
+        layout="@layout/layout_custom_toolbar"
+        />
 
 </FrameLayout>

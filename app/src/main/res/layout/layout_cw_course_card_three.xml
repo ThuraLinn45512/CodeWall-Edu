@@ -45,7 +45,7 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="8dp"
                 android:text="UI and Figma Master Basic to \nAdvanced Course"
-                android:textColor="@color/text_primary"
+                android:textColor="@color/text_color_2"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/iv_sub_course" />
 
@@ -67,7 +67,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:text="20 Mins"
-                android:textColor="@color/text_primary"
+                android:textColor="@color/text_color_2"
                 app:layout_constraintBottom_toBottomOf="@+id/ivDuration"
                 app:layout_constraintStart_toEndOf="@+id/ivDuration"
                 app:layout_constraintTop_toTopOf="@+id/ivDuration" />
@@ -91,7 +91,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:text="Chapters 14"
-                android:textColor="@color/text_primary"
+                android:textColor="@color/text_color_2"
                 app:layout_constraintBottom_toBottomOf="@+id/plan"
                 app:layout_constraintStart_toEndOf="@+id/plan"
                 app:layout_constraintTop_toTopOf="@+id/plan" />

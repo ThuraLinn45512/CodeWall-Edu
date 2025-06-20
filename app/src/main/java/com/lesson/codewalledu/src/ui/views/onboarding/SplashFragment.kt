@@ -75,7 +75,7 @@ class SplashFragment : Fragment() {
                         // Navigation logic based on status
                         when {
                             isLoggedIn -> {
-                                findNavController().navigate(R.id.action_splashFragment_to_homeFragment)
+                                findNavController().navigate(R.id.action_splashFragment_to_mainFragment)
                             }
                             isOnboardingFinished -> {
                                 findNavController().navigate(R.id.action_splashFragment_to_loginFragment)

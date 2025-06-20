@@ -64,7 +64,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:hint="@string/enter_your_email_address"
-            android:textColorHint="@color/text_label"
+            android:textColorHint="@color/text_color_3"
             android:inputType="textEmailAddress"
             android:lines="1" />
 
@@ -106,7 +106,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:hint="@string/enter_your_password"
-            android:textColorHint="@color/text_label"
+            android:textColorHint="@color/text_color_3"
             android:inputType="textPassword"
             android:lines="1"
             android:maxLength="16"
@@ -119,7 +119,7 @@
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/remember_me"
         android:text="@string/remember_password"
-        android:textColor="@color/text_unconfrimed"
+        android:textColor="@color/text_color_2"
         android:layout_marginStart="@dimen/spacing_sm"
         android:layout_marginTop="@dimen/spacing_sm"
 

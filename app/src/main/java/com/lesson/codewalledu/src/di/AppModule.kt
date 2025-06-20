@@ -1,12 +1,16 @@
 package com.lesson.codewalledu.src.di
 
 import android.content.Context
+import androidx.viewpager.widget.ViewPager
+import androidx.viewpager2.widget.ViewPager2
 import com.lesson.codewalledu.src.data.remote.ApiService
 import com.lesson.codewalledu.src.data.remote.AuthInterceptor
 import com.lesson.codewalledu.src.data.repositories.AuthRepository
 import com.lesson.codewalledu.src.utils.Constants.Companion.BASE_URL
 import com.lesson.codewalledu.src.utils.Constants.Companion.MAIN_BASE_URL
+import com.lesson.codewalledu.src.utils.CustomDurationScroller
 import com.lesson.codewalledu.src.utils.TokenManager
+import com.lesson.codewalledu.src.utils.UserPreferences
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -16,6 +20,7 @@ import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
+import java.lang.reflect.Field
 import javax.inject.Singleton
 
 @Module
@@ -65,4 +70,16 @@ object AppModule {
     fun provideAuthRepository(apiService: ApiService, tokenManager: TokenManager): AuthRepository {
         return AuthRepository(apiService, tokenManager)
     }
+
+
+
+    @Provides
+    @Singleton // Instance တစ်ခုတည်းသာ ရှိစေရန်
+    fun provideUserPreferencesRepository(@ApplicationContext context: Context): UserPreferences {
+        return UserPreferences(context)
+    }
+
+
+
+
 }

@@ -59,7 +59,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:text="Drat Programming And Flutter Framework Course"
-        android:textColor="@color/text_primary"
+        android:textColor="@color/text_color_2"
         app:layout_constraintStart_toStartOf="parent"
         tools:layout_editor_absoluteY="76dp" />
 

@@ -3,17 +3,15 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
-        android:id="@+id/mainFragment"
+        android:id="@+id/homeScreenFragment"
         android:icon="@drawable/bottom_nav_switch_icon_home"
         android:title="@string/home"
-
         />
 
     <item
         android:id="@+id/learnScreenFragment"
         android:icon="@drawable/bottom_nav_switch_icon_learn"
         android:title="@string/learn"
-
         />
 
     <item

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginHorizontal="16dp"
+    android:layout_marginBottom="8dp"
+    android:orientation="vertical">
+    <TextView
+        android:id="@+id/tv_module_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Section Name"
+        style="@style/title_small"
+        android:textColor="@color/text_color_2"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_chapters"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/layout_card_curriculum"
+        tools:itemCount="2"
+        />
+
+
+</LinearLayout>

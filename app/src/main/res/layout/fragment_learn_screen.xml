@@ -3,8 +3,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".src.views.core.your_courses.MyLearningFragment"
-    android:background="#9C27B0"
     android:orientation="vertical"
     >
 

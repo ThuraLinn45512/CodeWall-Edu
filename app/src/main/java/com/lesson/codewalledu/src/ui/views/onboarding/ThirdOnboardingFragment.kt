@@ -15,15 +15,19 @@ import com.lesson.codewalledu.src.utils.APP_COLOR_BLUE
 import com.lesson.codewalledu.src.utils.APP_COLOR_CYAN
 import com.lesson.codewalledu.src.utils.UserPreferences
 import com.lesson.codewalledu.src.utils.helpers.applyGradient
+import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
 import java.util.Locale
+import javax.inject.Inject
 
-
+@AndroidEntryPoint
 class ThirdOnboardingFragment : Fragment() {
 
     lateinit var binding: FragmentThirdOnboardingBinding
     private val viewModel: SharedViewModel by activityViewModels()
-    private lateinit var userPreferences: UserPreferences
+
+    @Inject
+    lateinit var userPreferences: UserPreferences
 
 
     override fun onCreateView(
@@ -43,9 +47,6 @@ class ThirdOnboardingFragment : Fragment() {
 //        var sharedPreferences = requireContext().getSharedPreferences("language", Context.MODE_PRIVATE)
 //        var languagePosition = sharedPreferences.getInt("language_position",0)
 
-
-        // Initialize UserPreferences
-        userPreferences = UserPreferences(requireContext())
 
 
         createSpinner(requireContext(), binding.languageSpinner)

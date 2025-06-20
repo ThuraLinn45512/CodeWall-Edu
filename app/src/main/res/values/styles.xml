@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-<!--    design system styles-->
+    <!--    design system styles-->
     <style name="title_large">
         <item name="android:text">Title Large</item>
         <item name="android:fontFamily">@font/inter_bold</item>
         <item name="android:textSize">22sp</item>
-        <item name="android:lineHeight">28dp</item>
+        <item name="android:lineHeight">28sp</item>
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
     </style>
-    <style name="title_medium">
+
+    <style name="title_medium" parent="TextAppearance.Material3.TitleMedium">
         <item name="android:text">Title Medium</item>
         <item name="android:fontFamily">@font/inter_bold</item>
-        <item name="android:textSize">16sp</item>
-        <item name="android:lineHeight">24dp</item>
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
     </style>
+
     <style name="title_small">
         <item name="android:text">Title Small</item>
         <item name="android:fontFamily">@font/inter_bold</item>
         <item name="android:textSize">14sp</item>
-        <item name="android:lineHeight">20dp</item>
+        <item name="android:lineHeight">20sp</item>
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
     </style>
@@ -32,72 +32,71 @@
         <item name="android:fontFamily">@font/urbanist</item>
         <item name="android:fontWeight">400</item>
         <item name="android:textSize">16sp</item>
-        <item name="android:lineHeight">24dp</item>
-        <item name="android:textColor">@color/text_unconfrimed</item>
+        <item name="android:lineHeight">24sp</item>
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
     </style>
+
     <style name="label_medium">
         <item name="android:text">Label Medium</item>
         <item name="android:fontFamily">@font/urbanist</item>
-        <item name="android:fontWeight">400</item>
+        <item name="android:fontWeight">500</item>
         <item name="android:textSize">12sp</item>
-        <item name="android:lineHeight">20dp</item>
-        <item name="android:textColor">@color/text_unconfrimed</item>
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">wrap_content</item>
-    </style>
-    <style name="label_small">
-        <item name="android:text">Label Medium</item>
-        <item name="android:fontFamily">@font/urbanist</item>
-        <item name="android:fontWeight">400</item>
-        <item name="android:textSize">11sp</item>
-        <item name="android:lineHeight">16dp</item>
-        <item name="android:textColor">@color/text_unconfrimed</item>
+        <item name="android:lineHeight">20sp</item>
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
     </style>
 
-    <style name="body_large">
+    <style name="label_small" parent="TextAppearance.Material3.LabelSmall">
+        <item name="android:text">Label Small</item>
+        <item name="android:fontFamily">@font/urbanist</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="body_large" parent="TextAppearance.Material3.BodyLarge">
         <item name="android:text">Body Large</item>
         <item name="android:fontFamily">@font/urbanist</item>
-        <item name="android:fontWeight">400</item>
-        <item name="android:textSize">16sp</item>
-        <item name="android:lineHeight">24dp</item>
-        <item name="android:textColor">@color/text_primary</item>
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
     </style>
 
-    <style name="body_medium">
+    <style name="body_medium" parent="TextAppearance.Material3.BodyMedium">
         <item name="android:text">Body Medium</item>
         <item name="android:fontFamily">@font/urbanist</item>
-        <item name="android:fontWeight">400</item>
-        <item name="android:textSize">14sp</item>
-        <item name="android:lineHeight">20dp</item>
-
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
     </style>
-    <style name="body_small">
+
+    <style name="body_small" parent="TextAppearance.Material3.BodySmall">
         <item name="android:text">Body Small</item>
         <item name="android:fontFamily">@font/urbanist</item>
-        <item name="android:fontWeight">400</item>
-        <item name="android:textSize">12sp</item>
-        <item name="android:lineHeight">16dp</item>
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">wrap_content</item>
-    </style>
-    <style name="body_myanmar_text">
-        <item name="android:fontFamily">@font/noto_sans_myanmar</item>
-        <item name="android:fontWeight">400</item>
-        <item name="android:textSize">10sp</item>
-        <item name="android:lineHeight">12dp</item>
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
     </style>
 
-<!--    project styles-->
+    <style name="label_myanmar_text" parent="title_small">
+        <item name="android:text">Label Myanmar</item>
+        <item name="android:fontFamily">@font/noto_sans_myanmar</item>
+    </style>
+
+    <style name="body_myanmar_text"  parent="body_medium">
+        <item name="android:text">Body Myanmar</item>
+        <item name="android:fontFamily">@font/noto_sans_myanmar</item>
+        <item name="android:lineHeight">14sp</item>
+    </style>
+
+
+
+
+
+
+
+
+
+
+
+    <!--    project styles-->
     <style name="onboarding_screen_background_image_style">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">match_parent</item>
@@ -106,14 +105,15 @@
 
     <style name="Toolbar.TitleText" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
         <item name="android:textColor">@android:color/transparent</item>
-
         <item name="android:background">@drawable/gradient_bg_95</item>
 
     </style>
 
     <style name="MyCustomTabStyle" parent="Widget.Design.TabLayout">
         <item name="tabTextAppearance">@style/MyTabTextAppearance</item>
-        <item name="tabSelectedTextColor">@color/tab_active_color</item>   <item name="tabTextColor">@color/tab_inactive_color</item>     </style>
+        <item name="tabSelectedTextColor">@color/tab_active_color</item>
+        <item name="tabTextColor">@color/tab_inactive_color</item>
+    </style>
 
     <style name="MyTabTextAppearance" parent="TextAppearance.Design.Tab">
         <item name="android:textSize">14sp</item>
@@ -124,21 +124,7 @@
 
 
 
-
-<!--        raw styles-->
-    <style name="test_page_text_style">
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:textSize">20sp</item>
-        <item name="android:textStyle">bold</item>
-    </style>
-
-    <style name="label_for_edit_text_style">
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_marginTop">16dp</item>
-        <item name="android:textColor">#565B66</item>
-    </style>
+    <!--    Have to find usages-->
 
     <style name="ShapeAppearanceOverlay.App.CustomRoundedCorners" parent="">
         <item name="cornerFamily">rounded</item>
@@ -147,6 +133,11 @@
 
     <style name="ShapeAppearanceOverlay.App.CornerSize50Percent" parent="">
         <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="Widget.Theme.CodeWallEdu2024.ButtonBar.Fullscreen" parent="">
+        <item name="android:background">@color/black_overlay</item>
+        <item name="android:buttonBarStyle">?android:attr/buttonBarStyle</item>
     </style>
 
 

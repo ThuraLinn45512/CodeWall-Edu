@@ -90,6 +90,10 @@
     <string name="invite_friends">Invite Friends</string>
     <string name="read_more">Read more</string>
     <string name="profile">Profile</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="see_all">See All</string>
+    <string name="by_tapping"><![CDATA[By tapping \"Purchase Course\", you agree to our Terms & Conditions.]]></string>
 
 
 </resources>

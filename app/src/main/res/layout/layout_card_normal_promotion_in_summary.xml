@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="8dp"
+    android:gravity="center_vertical">
+
+
+    <TextView
+        android:id="@+id/tv_promotion_name"
+        style="@style/body_small"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Seasonal Promotion (5%)"
+        android:textColor="@color/text_color_3" />
+
+    <TextView
+        android:id="@+id/tv_saved_price"
+        style="@style/body_small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-15,000 MMK"
+        android:textColor="#34C759"
+        android:textFontWeight="500" />
+</LinearLayout>

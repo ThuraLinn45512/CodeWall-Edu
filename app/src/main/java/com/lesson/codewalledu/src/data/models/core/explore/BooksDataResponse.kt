@@ -1,5 +1,7 @@
 package com.lesson.codewalledu.src.data.models.core.explore
 
+import android.os.Parcelable
+import kotlinx.android.parcel.Parcelize
 import java.io.Serializable
 
 data class BooksDataResponse(
@@ -7,6 +9,7 @@ data class BooksDataResponse(
     val message: String
 )
 
+@Parcelize
 data class BookData(
     val id: Int,
     val author: String,
@@ -18,4 +21,4 @@ data class BookData(
     val publisher: String,
     val title: String,
     val year: Int
-): Serializable
+): Parcelable, Serializable

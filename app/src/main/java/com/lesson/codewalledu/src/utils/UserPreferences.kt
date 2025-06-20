@@ -6,11 +6,15 @@ import androidx.datastore.preferences.core.Preferences
 import androidx.datastore.preferences.core.booleanPreferencesKey
 import androidx.datastore.preferences.core.edit
 import androidx.datastore.preferences.preferencesDataStore
+import dagger.hilt.android.qualifiers.ApplicationContext
+import jakarta.inject.Inject
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
 
-class UserPreferences(
-    private val context:Context
+
+
+class UserPreferences@Inject constructor(
+    @ApplicationContext private val context: Context // Hilt ကနေ ApplicationContext ကို inject လုပ်ပါတယ်။
 ) {
     private val applicationContext = context.applicationContext
 
@@ -18,11 +22,16 @@ class UserPreferences(
         private val Context.dataStore: DataStore<Preferences> by preferencesDataStore(name = "settings")
         private val ONBOARDING_FINISHED_KEY = booleanPreferencesKey("onboarding_finished")
         private val USER_LOGGED_IN_KEY = booleanPreferencesKey("user_logged_in")
+        private val IS_USER_PREMIUM_KEY = booleanPreferencesKey("is_premium_user")
+
     }
+
+
 
     // Flows to observe onboarding and login status (using readBoolean)
     val isOnboardingFinishedFlow: Flow<Boolean> = readBoolean(ONBOARDING_FINISHED_KEY)
     val isUserLoggedInFlow: Flow<Boolean> = readBoolean(USER_LOGGED_IN_KEY)
+    val isUserPremiumFlow: Flow<Boolean> = readBoolean(IS_USER_PREMIUM_KEY)
 
     // Function to write values to DataStore
     // Function to write Boolean values to DataStore
@@ -47,6 +56,20 @@ class UserPreferences(
     suspend fun setLoggedIn(loggedIn: Boolean) {
         writeBoolean(USER_LOGGED_IN_KEY, loggedIn)
     }
+
+    suspend fun setUserPremium(isPremium: Boolean) {
+        writeBoolean(IS_USER_PREMIUM_KEY, isPremium)
+    }
+
+
+    // User data အားလုံးကို clear လုပ်ချင်ရင်
+    suspend fun clearAllPreferences() {
+        applicationContext.dataStore.edit { settings ->
+           settings.clear()
+        }
+    }
+
+
 
 
 

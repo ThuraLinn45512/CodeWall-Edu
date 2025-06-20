@@ -1,0 +1,856 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:anroid="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".src.ui.views.core.home.courses.EnrollInCourseFragment">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/layout_custom_toolbar" />
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:paddingHorizontal="16dp"
+        android:paddingBottom="12dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:orientation="vertical"
+                android:padding="16dp"
+                anroid:cardCornerRadius="8dp"
+                anroid:strokeWidth="0dp">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/gradient_bg_course_card"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <LinearLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="12dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_marginTop="4dp"
+                            android:layout_marginRight="8dp"
+                            android:src="@drawable/baseline_schedule_24"
+                            anroid:tint="@color/white" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                style="@style/TextAppearance.Material3.HeadlineSmall"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Java Programming"
+                                android:textColor="@color/white" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:layout_gravity="top"
+                                    style="@style/body_medium"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="8dp"
+                                    android:text="Basic Course"
+                                    android:textColor="@color/white" />
+
+                                <com.google.android.material.chip.Chip
+                                    style="@style/label_small"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:backgroundTint="#20ffffff"
+                                    android:paddingHorizontal="8dp"
+                                    android:text="Beginner"
+                                    android:textColor="@color/white"
+                                    anroid:chipCornerRadius="20dp"
+                                    anroid:chipStrokeColor="@android:color/transparent"
+                                    anroid:chipStrokeWidth="0dp" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="4dp"
+                                android:gravity="center_vertical">
+
+                                <ImageView
+                                    android:layout_width="24dp"
+                                    android:layout_height="24dp"
+                                    android:layout_marginRight="4dp"
+                                    android:src="@drawable/baseline_schedule_24"
+                                    anroid:tint="@color/white" />
+
+                                <TextView
+                                    android:id="@+id/tv_enroll_course_length"
+                                    style="@style/body_medium"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="120 Hours"
+                                    android:textColor="@color/white" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical">
+
+                                <ImageView
+                                    android:layout_width="24dp"
+                                    android:layout_height="24dp"
+                                    android:layout_marginRight="4dp"
+                                    android:src="@drawable/verified_user_24px"
+                                    anroid:tint="@color/white" />
+
+                                <TextView
+                                    style="@style/body_medium"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Certificate"
+                                    android:textColor="@color/white" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical">
+
+                                <ImageView
+                                    android:layout_width="24dp"
+                                    android:layout_height="24dp"
+                                    android:layout_marginRight="4dp"
+                                    android:src="@drawable/baseline_menu_book_24"
+                                    anroid:tint="@color/white" />
+
+                                <TextView
+                                    android:id="@+id/tv_count_chapter"
+                                    style="@style/body_medium"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="25 Chapters"
+                                    android:textColor="@color/white" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <LinearLayout
+                android:paddingHorizontal="12dp"
+                android:paddingVertical="6dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                >
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="12dp"
+                    android:layout_weight="1"
+                    anroid:cardCornerRadius="8dp"
+                    anroid:strokeColor="#FEF08A"
+                    anroid:strokeWidth="1dp"
+                    >
+
+                    <LinearLayout
+                        android:padding="8dp"
+                        android:background="@color/white"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical">
+
+                            <ImageView
+
+                                android:layout_width="16dp"
+                                android:layout_height="16dp"
+                                android:layout_marginRight="8dp"
+                                android:src="@drawable/outline_monetization_on_24"
+                                anroid:tint="#CA8A04" />
+
+
+
+                            <TextView
+                                android:textColor="@color/text_color_1"
+                                android:textFontWeight="500"
+                                style="@style/label_large"
+                                android:text="Learning Credits" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/tv_user_current_points"
+                            style="@style/TextAppearance.Material3.LabelMedium"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#A16207"
+                            android:text="300 Pts"
+                            android:textFontWeight="700" />
+
+
+                    </LinearLayout>
+
+
+                </com.google.android.material.card.MaterialCardView>
+
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    anroid:strokeColor="#BBF7D0"
+                    anroid:strokeWidth="1dp"
+                    anroid:cardCornerRadius="8dp">
+
+                    <LinearLayout
+                        android:padding="8dp"
+                        android:background="@color/white"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical">
+
+                            <ImageView
+                                android:layout_width="16dp"
+                                android:layout_height="16dp"
+                                android:layout_marginRight="8dp"
+                                android:src="@drawable/outline_account_balance_wallet_24"
+                                anroid:tint="#16A34A" />
+
+                            <TextView
+                                android:textColor="@color/text_color_1"
+                                style="@style/label_large"
+                                android:textFontWeight="500"
+                                android:text="Your Balance" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/tv_user_current_balance"
+                            style="@style/TextAppearance.Material3.LabelMedium"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="300,000 MMK"
+                            android:textColor="#15803D"
+                            android:textFontWeight="700" />
+
+
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:orientation="vertical"
+
+                android:paddingHorizontal="12dp"
+                android:paddingVertical="6dp">
+
+                <TextView
+                    android:id="@+id/tv_available_discounts"
+                    android:visibility="gone"
+                    tools:visibility="visible"
+                    style="@style/title_medium"
+                    android:layout_marginBottom="8dp"
+                    android:textColor="@color/text_color_1"
+                    android:text="Available Discounts" />
+
+               <androidx.recyclerview.widget.RecyclerView
+                   android:id="@+id/rv_normal_promotions"
+                   android:visibility="gone"
+                   tools:visibility="visible"
+                   tools:itemCount="2"
+                   anroid:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                   tools:listitem="@layout/layout_card_normal_promotion"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content">
+
+               </androidx.recyclerview.widget.RecyclerView>
+
+
+                <com.google.android.material.card.MaterialCardView
+                    android:visibility="gone"
+                    tools:visibility="visible"
+                    android:id="@+id/mc_premium_member_discount"
+                    android:layout_width="match_parent"
+                    android:layout_marginBottom="4dp"
+                    anroid:cardCornerRadius="8dp"
+                    anroid:strokeWidth="1dp"
+                    anroid:strokeColor="#E9D5FF"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:background="@color/white"
+                        android:gravity="center_vertical"
+                        android:padding="12dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            android:layout_marginRight="4dp"
+                            android:src="@drawable/workspace_premium_24px"
+                            anroid:tint="#9333EA" />
+                        <LinearLayout
+                            android:layout_marginEnd="16dp"
+                            android:orientation="vertical"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                style="@style/body_medium"
+                                android:textColor="@color/text_color_2"
+                                android:text="Premium Member Discount" />
+                            <TextView
+                                style="@style/body_medium"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="#9333EA"
+                                android:text="(Credit Points Only)" />
+                        </LinearLayout>
+                        <TextView
+                            android:id="@+id/tv_premium_member_save_rate"
+                            style="@style/body_medium"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="5% OFF"
+                            android:textColor="#34C759"
+                            android:textFontWeight="700" />
+                    </LinearLayout>
+
+
+                </com.google.android.material.card.MaterialCardView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:orientation="vertical"
+
+                android:paddingHorizontal="12dp"
+                android:paddingVertical="6dp">
+
+                <TextView
+                    style="@style/title_medium"
+                    android:textColor="@color/text_color_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:text="Payment Methods" />
+
+                <com.google.android.material.card.MaterialCardView
+                    tools:visibility="gone"
+                    android:id="@+id/mc_payWithPoint"
+                    anroid:cardCornerRadius="8dp"
+                    android:background="@color/white"
+                    anroid:strokeColor="@color/unselected_stroke_color"
+                    anroid:strokeWidth="1dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp">
+
+                    <LinearLayout
+                        android:id="@+id/layout_payWithPoint"
+                        android:background="@color/white"
+                        android:gravity="center_vertical"
+                        android:padding="16dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                style="@style/title_small"
+                                android:textColor="@color/text_color_1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Pay wiht learning credits" />
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+                                <TextView
+                                    style="@style/body_small"
+                                    android:textColor="@color/text_color_3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Available:"
+                                    />
+                                <TextView
+                                    android:id="@+id/tv_user_current_points_in_payment_methods"
+                                    android:textColor="@color/text_color_1"
+                                    style="@style/body_small"
+                                    android:textFontWeight="600"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="300 Pts"
+                                    />
+                            </LinearLayout>
+                            <TextView
+                                style="@style/body_small"
+                                android:textColor="#34C759"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Save 10% with combined discounts!" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/tv_total_cost_points_in_payment_method"
+                            android:layout_marginEnd="8dp"
+                            style="@style/label_large"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="270 Pts"
+                            android:textColor="@color/text_color_1"
+                            android:textFontWeight="600" />
+
+                        <ImageView
+                            android:id="@+id/icon_pay_with_points"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_marginRight="4dp"
+                            android:src="@drawable/chevron_right_24px"
+                            anroid:tint="#A8AEBE" />
+                    </LinearLayout>
+
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    tools:visibility="gone"
+                    android:id="@+id/mc_payWithBalance"
+                    android:layout_width="match_parent"
+                    anroid:cardCornerRadius="8dp"
+                    android:layout_marginBottom="8dp"
+                    anroid:strokeWidth="1dp"
+                    anroid:strokeColor="@color/selected_stroke_color"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:id="@+id/layout_payWithBalance"
+                        android:background="@color/white"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:padding="16dp">
+
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                style="@style/title_small"
+                                android:textColor="@color/text_color_1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Pay wiht Balance" />
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+                                <TextView
+                                    style="@style/body_small"
+                                    android:textColor="@color/text_color_3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Available:"
+                                    />
+                                <TextView
+                                    android:id="@+id/tv_user_current_balance_in_payment_method"
+                                    android:textColor="@color/text_color_1"
+                                    style="@style/body_small"
+                                    android:textFontWeight="600"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="300,000 MMK"
+                                    />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/tv_total_cost_price_in_payment_method"
+                            android:layout_marginEnd="8dp"
+                            style="@style/label_large"
+                            android:textFontWeight="700"
+                            android:textColor="#007AFF"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="285,000 MMK" />
+
+                        <ImageView
+                            android:id="@+id/icon_pay_with_balance"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_marginRight="4dp"
+                            android:src="@drawable/check_circle_24px"
+                            anroid:tint="#007AFF" />
+
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:visibility="gone"
+                    tools:visibility="visible"
+                    android:id="@+id/mc_insufficient_payWithBalance"
+                    android:layout_width="match_parent"
+                    anroid:cardCornerRadius="8dp"
+                    android:layout_marginBottom="8dp"
+                    anroid:strokeWidth="1dp"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:id="@+id/layout_insufficient_payWithBalance"
+                        android:background="#FFF3E0"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <View
+                            android:layout_marginEnd="16dp"
+                            android:background="#FF9500"
+                            android:layout_width="8dp"
+                            android:layout_height="match_parent"/>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:paddingEnd="16dp"
+                            android:paddingVertical="16dp">
+
+
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content">
+                                <TextView
+                                    style="@style/title_small"
+                                    android:textColor="#E65100"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Insufficient balance" />
+                                <TextView
+                                    android:id="@+id/tv_insufficient_user_current_balance_in_payment_method"
+                                    android:textColor="#E65100"
+                                    style="@style/body_small"
+                                    android:layout_width="match_parent"
+                                    android:layout_marginEnd="12dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="You need 185,000 MMK more.
+                                Please top up to proceed."
+                                    />
+                            </LinearLayout>
+
+                            <com.google.android.material.button.MaterialButton
+                                anroid:cornerRadius="8dp"
+                                android:backgroundTint="#FF9500"
+                                style="@style/Widget.Material3.Button.IconButton.Filled"
+                                anroid:icon="@drawable/outline_account_balance_wallet_24"
+                                android:text="Top Up"
+                                anroid:iconPadding="8dp"
+                                android:paddingHorizontal="16dp"
+                                anroid:iconGravity="end"
+                                android:layout_width="wrap_content"
+                                android:maxWidth="120dp"
+                                android:minHeight="60dp"
+                                android:layout_height="wrap_content"/>
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/mc_insufficient_payWithPoint"
+                    tools:visibility="visible"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    anroid:cardCornerRadius="8dp"
+                    android:layout_marginBottom="8dp"
+                    anroid:strokeWidth="1dp"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:id="@+id/layout_insufficient_payWithPoint"
+                        android:background="#FFF3E0"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <View
+                            android:layout_marginEnd="16dp"
+                            android:background="#FF9500"
+                            android:layout_width="8dp"
+                            android:layout_height="match_parent"/>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:paddingEnd="16dp"
+                            android:paddingVertical="16dp">
+
+
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content">
+                                <TextView
+                                    style="@style/title_small"
+                                    android:textColor="#E65100"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Insufficient learning credits" />
+                                <TextView
+                                    android:id="@+id/tv_insufficient_user_current_Point_in_payment_method"
+                                    android:textColor="#E65100"
+                                    style="@style/body_small"
+                                    android:layout_width="match_parent"
+                                    android:layout_marginEnd="12dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="You need 220 more points. Earn points or use another payment method."
+                                    />
+                            </LinearLayout>
+
+                            <com.google.android.material.button.MaterialButton
+                                android:maxHeight="44dp"
+                                anroid:cornerRadius="8dp"
+                                android:backgroundTint="#FF9500"
+                                style="@style/Widget.Material3.Button.IconButton.Filled"
+                                anroid:icon="@drawable/outline_account_balance_wallet_24"
+                                android:text="Earn Points"
+                                anroid:iconPadding="8dp"
+                                android:paddingHorizontal="16dp"
+                                anroid:iconGravity="end"
+                                android:minHeight="60dp"
+                                android:layout_width="wrap_content"
+                                android:maxWidth="120dp"
+                                android:layout_height="wrap_content"/>
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+
+                android:paddingHorizontal="12dp"
+                android:paddingVertical="6dp">
+
+
+                <TextView
+                    android:textColor="@color/text_color_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:fontFamily="@font/inter"
+                    android:lineHeight="27sp"
+                    android:text="Price Summary"
+                    android:textFontWeight="600"
+                    android:textSize="19sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:gravity="center_vertical">
+
+
+                    <TextView
+                        android:textColor="@color/text_color_3"
+                        style="@style/body_small"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Original Price" />
+
+                    <TextView
+                        android:id="@+id/tv_original_price"
+                        style="@style/body_small"
+                        android:layout_width="wrap_content"
+                        android:textColor="@color/text_color_1"
+                        android:layout_height="wrap_content"
+                        android:text="300,000 MMK"
+                        android:textFontWeight="500" />
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_normal_promotions_in_price_summary"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    tools:visibility="visible"
+                    anroid:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    tools:itemCount="2"
+                    tools:listitem="@layout/layout_card_normal_promotion_in_summary"
+                    />
+
+
+
+                <com.google.android.material.divider.MaterialDivider
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    anroid:dividerColor="#A8AEBE"
+                    android:layout_marginBottom="8dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:gravity="center_vertical">
+
+
+                    <TextView
+                        android:textColor="@color/text_color_1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/inter"
+                        android:lineHeight="27sp"
+                        android:text="Total Amount"
+                        android:textFontWeight="600"
+                        android:textSize="19sp" />
+
+                    <TextView
+                        android:id="@+id/tv_total_cost_amount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/inter"
+                        android:lineHeight="33sp"
+                        android:text="285,000 MMK"
+                        android:textFontWeight="700"
+                        android:textColor="#007AFF"
+                        android:textSize="22sp" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        anroid:cardCornerRadius="0dp"
+        anroid:strokeColor="@color/white"
+        anroid:strokeWidth="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:gravity="bottom"
+            android:orientation="vertical"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="12dp">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/btn_purchase"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:backgroundTint="@color/brand"
+                android:clickable="true"
+                android:focusable="true"
+                anroid:strokeColor="@color/white"
+                anroid:strokeWidth="0dp"
+                android:gravity="center_horizontal"
+                anroid:cardCornerRadius="8dp">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_enroll"
+                    style="@style/Widget.Material3.Button.IconButton.Filled"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:backgroundTint="@android:color/transparent"
+                    android:drawableLeft="@drawable/shopping_cart_24px"
+                    android:drawableTint="@color/white"
+                    android:minHeight="48dp"
+                    android:paddingVertical="8dp"
+                    android:text="Purchase Course"
+                    android:textColor="@color/white"
+                    anroid:iconPadding="8dp"
+                    app:cornerRadius="8dp" />
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <TextView
+                style="@style/label_small"
+                android:textColor="@color/text_color_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/by_tapping"
+                android:textAlignment="center" />
+
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+
+</LinearLayout>

@@ -65,7 +65,7 @@
         app:spanCount="2"
         android:orientation="vertical"
         app:layoutManager="androidx.recyclerview.widget.StaggeredGridLayoutManager"
-        tools:listitem="@layout/layout_image_card"
+        tools:listitem="@layout/layout_card_book_cover"
         />
 
 

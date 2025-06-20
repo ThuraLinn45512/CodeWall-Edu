@@ -60,7 +60,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:hint="@string/username"
-            android:textColorHint="@color/text_label"
+            android:textColorHint="@color/text_color_3"
             android:inputType="textEmailAddress"
             android:lines="1" />
 
@@ -141,7 +141,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:hint="@string/create_an_account"
-            android:textColorHint="@color/text_label"
+            android:textColorHint="@color/text_color_3"
             android:inputType="textPassword"
             android:lines="1"
             android:maxLength="16"

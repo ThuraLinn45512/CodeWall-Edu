@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="4dp"
+    anroid:cardCornerRadius="8dp"
+    anroid:strokeWidth="1dp"
+    anroid:strokeColor="#BFDBFE"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:anroid="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:padding="12dp">
+
+        <ImageView
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_marginRight="4dp"
+            android:src="@drawable/outline_sell_24"
+            anroid:tint="#007AFF"
+            />
+
+
+
+        <TextView
+            android:id="@+id/tv_promotion_name"
+            style="@style/body_medium"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Seasonal Promotion"
+            android:textColor="@color/text_color_2" />
+
+        <TextView
+            android:id="@+id/tv_promotion_rate"
+            style="@style/body_medium"
+            android:text="5% OFF"
+            android:textColor="#34C759"
+            android:textFontWeight="700" />
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

@@ -43,17 +43,10 @@ class ShowAllBlogsFragment : Fragment(R.layout.fragment_show_all_blogs) {
         showAllBlogsBinding.toolbar.toolbarTitle.text = "Our Blogs"
         showAllBlogsBinding.toolbar.toolbarTitle.applyGradient(APP_COLOR_BLUE, APP_COLOR_CYAN)
         showAllBlogsBinding.toolbar.backIcon.setOnClickListener {
-            findNavController().navigate(R.id.action_showAllBlogsFragment_to_homeScreenFragment)
+            findNavController().navigate(R.id.action_showAllBlogsFragment_pop)
         }
 
-        handleOnBackPressed(R.id.action_showAllBlogsFragment_to_homeScreenFragment)
-
-        lifecycleScope.launch {
-            while (isActive){
-                blogsViewModel.getBlogs()
-                delay(3000)
-            }
-        }
+        handleOnBackPressed(R.id.action_showAllBlogsFragment_pop)
 
         blogsViewModel.blogsDataResponse.observe(viewLifecycleOwner){
             when(it){
@@ -71,8 +64,7 @@ class ShowAllBlogsFragment : Fragment(R.layout.fragment_show_all_blogs) {
                         itemBinding.apply {
                             Picasso.get()
                                 .load(data.imageUrl)
-                                .fit()
-                                .error(R.drawable.baseline_search_24)
+                                .error(R.drawable.rectangle_placeholder)
                                 .into(ivBlogImage)
                             tvTitleBlogs.text = data.contentTitle
                             tvCreatedDate.text= data.createdAt

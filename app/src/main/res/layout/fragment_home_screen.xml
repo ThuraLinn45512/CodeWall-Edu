@@ -12,7 +12,7 @@
 
     <include
         android:id="@+id/toolbar"
-        layout="@layout/layout_custom_toolbar" />
+        layout="@layout/layout_custom_home_screen_toolbar" />
 
 
     <FrameLayout
@@ -39,11 +39,12 @@
 
 
                 <androidx.viewpager2.widget.ViewPager2
-                    android:id="@+id/view_pager_coupons_explore"
+                    android:id="@+id/view_pager_banners"
                     android:layout_width="match_parent"
-                    android:layout_height="180dp"
+                    android:layout_height="wrap_content"
+                    android:minHeight="200dp"
                     android:layout_marginTop="8dp"
-                    tools:listitem="@layout/layout_cw_cupons" />
+                    tools:listitem="@layout/layout_card_banners" />
 
                 <com.tbuonomo.viewpagerdotsindicator.DotsIndicator
                     android:id="@+id/coupons_dots_indicator"
@@ -68,19 +69,20 @@
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="24dp"
                     android:text="Topic"
-                    android:textColor="@color/text_title" />
-
+                    android:textColor="@color/text_color_1" />
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/rv_tabs_explore"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="16dp"
                     app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                    android:orientation="horizontal"
                     app:spanCount="2"
-                    tools:itemCount="4"
+                    tools:itemCount="6"
                     tools:listitem="@layout/layout_cw_tab" />
 
                 <LinearLayout
+                    android:id="@+id/test_container"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
@@ -95,7 +97,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="Popular Courses"
-                        android:textColor="@color/text_title" />
+                        android:textColor="@color/text_color_1" />
 
                     <TextView
                         android:id="@+id/tv_see_all_popular_courses"
@@ -104,11 +106,13 @@
                         android:layout_height="wrap_content"
                         android:clickable="true"
                         android:focusable="true"
+                        android:fontFamily="@font/inter_bold"
                         android:foreground="?android:attr/selectableItemBackground"
-                        android:text="See All"
+                        android:text="@string/see_all"
                         android:textColor="@color/accent"
                         android:textStyle="bold" />
                 </LinearLayout>
+
                 <androidx.viewpager2.widget.ViewPager2
                     android:id="@+id/rv_popular_courses_explore"
                     android:layout_width="match_parent"
@@ -134,7 +138,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="Free Courses"
-                        android:textColor="@color/text_title" />
+                        android:textColor="@color/text_color_1" />
 
                     <TextView
                         android:id="@+id/tv_see_all_free_courses"
@@ -237,7 +241,7 @@
                         android:layout_height="wrap_content"
                         android:text="daily."
                         android:fontFamily="@font/audiowide"
-                        android:textColor="@color/text_title" />
+                        android:textColor="@color/text_color_1" />
                     <TextView
                         android:id="@+id/tv_our_blogs_sub"
                         android:textSize="18sp"
@@ -261,6 +265,7 @@
                         android:textColor="@color/accent"
                         android:textStyle="bold" />
                 </LinearLayout>
+
                 <androidx.recyclerview.widget.RecyclerView
                     android:layout_marginStart="16dp"
                     android:layout_marginEnd="16dp"
@@ -291,7 +296,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="Upcoming Courses"
-                        android:textColor="@color/text_title" />
+                        android:textColor="@color/text_color_1" />
 
                     <TextView
                         android:id="@+id/tv_see_all_upcoming_courses"
@@ -374,7 +379,7 @@
                             android:layout_marginStart="16dp"
                             android:layout_marginTop="8dp"
                             android:text="@string/refer_a_friend"
-                            android:textColor="@color/text_primary" />
+                            android:textColor="@color/text_color_2" />
 
                     </LinearLayout>
 

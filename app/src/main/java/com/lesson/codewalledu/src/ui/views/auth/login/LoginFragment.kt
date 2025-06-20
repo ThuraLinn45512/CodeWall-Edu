@@ -14,6 +14,7 @@ import com.lesson.codewalledu.src.utils.UserPreferences
 import com.lesson.codewalledu.src.utils.helpers.visible
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
 @AndroidEntryPoint
 class LoginFragment : Fragment(R.layout.fragment_login) {
@@ -22,13 +23,13 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
 
     private val viewModel: LoginViewModel by viewModels()
 
-    private lateinit var userPreferences: UserPreferences
+    @Inject
+    lateinit var userPreferences: UserPreferences
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
         binding = FragmentLoginBinding.bind(view)
-        userPreferences = UserPreferences(requireContext())
 
         // Initially hide the progress bar
         binding.progressbar.visible(false)
